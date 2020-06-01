@@ -19,13 +19,13 @@ header {
     background-color: rgba(255,255,255,0.6);
 }
 .base_menu{
-    width: 12vw;
+    width: 50vw;
     height: 300px;
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
-    left: calc(-40vw);
+    top: 2vh;
+    left: calc(-60vw);
     border: 2px solid #333;
     border-radius: 5px;
     background-color: #fff;
@@ -57,30 +57,18 @@ header {
 p {
     font-size: 1rem;
 }
-@media (min-width:1024px) {
-    .container {
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: space-around;
-}
-    .card {
-        margin: 0 1vw;
-    }
-    main, header, footer {
-        width: 1024px;
-    }
-}
 #back {
-    background-color: white;
-    font-size: 3rem;
+    background-color: greenyellow;
+    font-size: 2rem;
     position: fixed;
-    top: 90vh;
+    display: block;
+    top: 95vh;
     left: 3vw;
 }
 body {
   margin: 0px;
   text-align: center;
-  padding: 30px;
+  padding:  30px;
 }
 #slideshow {
   position: relative;
@@ -88,7 +76,7 @@ body {
   height: 400px;
   margin: 0 auto;
   background: #695753;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow: 2px 2px 5px 0 rgba(0,0,0,.4);
 }
 #slideshow img {
@@ -97,7 +85,7 @@ body {
   top: 0;
   max-width: 100%;
   display: block;
-  padding: 10px;
+  
  -webkit-transform: scale(0);    
   transform: scale(0);
   -webkit-transition: .8s ease-in-out;    
@@ -124,13 +112,32 @@ nav {
    }
    ul {
     margin-left: 0;  /*Отступ слева в браузере IE и Opera */
-    padding-left: 0;  /*Отступ слева в браузере Firefox, Safari, Chrome */
+   padding-left: 0;  /*Отступ слева в браузере Firefox, Safari, Chrome */
    }
-/*#a2:target{
-  display: inline-block;
-  box-shadow: inset -1px 1px 1px 0 rgba(0, 0, 0, 0.5), 0 1px 1px 0 white;
-  color: #695753;
-}*/
+@media (min-width:1024px) {
+    .base_menu{
+      width: 30vw;
+    }
+    .container {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around;
+}
+    .card {
+        margin: 0 1vw;
+    }
+    main, header, footer {
+        width: 1024px;
+    }
+    #slideshow {
+        border-radius: 10px;
+    }
+    #slideshow img {
+        padding: 10px;
+        
+    }
+}
+
 .about{
     align-items:stretch;
     text-align: justify;
@@ -141,7 +148,7 @@ nav {
     font: 14px "Trebuchet MS", "Lucida Sans";
     padding: 0;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
- 
+  
 }
 .rounded a {
     position: relative;
@@ -161,7 +168,7 @@ nav {
     content: counter(li);
     counter-increment: li;
     position: absolute;
-    left: -1.3em;
+   left:  -1.3em;
     top: 50%;
     margin-top: -1.3em;
     background: #8FD4C1;
@@ -188,6 +195,7 @@ nav {
   max-width: 100%;
   height: auto;
   display: block;
+  
 }
 .caption-border figcaption {
   padding: 10px;
